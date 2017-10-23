@@ -1,0 +1,16 @@
+{
+	"FileVersion": 3,
+	"EngineAssociation": "{44D2FCD2-47ED-55A8-C2C0-0FBF934E568A}",
+	"Category": "",
+	"Description": "",
+	"Modules": [
+		{
+			"Name": "BOOOOOOMB",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"AdditionalDependencies": [
+				"Engine"
+			]
+		}
+	]
+}
