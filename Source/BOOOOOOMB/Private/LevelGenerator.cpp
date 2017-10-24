@@ -1,5 +1,3 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
 #include "LevelGenerator.h"
 
 ALevelGenerator::ALevelGenerator()
@@ -42,6 +40,12 @@ void ALevelGenerator::GenerateWalls()
 {
 	GenerateStartingGrid();
 	GenerateHilbertCurve(Level, BaseDirection);
+
+	for (uint8 i = 0; i < 15; i++)
+		for (uint8 j = 0; j < 15; j++)
+			if(Grid[i][j])
+				GetWorld()->SpawnActor<AWall>();
+
 }
 
 void ALevelGenerator::GenerateStartingGrid()
@@ -52,7 +56,6 @@ void ALevelGenerator::GenerateStartingGrid()
 			BaseDirection = EDirection::DE_UP;
 			CurrentY = 0;
 			CurrentX = 14;
-
 			break;
 		case 1:
 			BaseDirection = EDirection::DE_LEFT;

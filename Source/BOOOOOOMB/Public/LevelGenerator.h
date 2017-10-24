@@ -1,6 +1,5 @@
 #pragma once
 
-#include "Wall.h"
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "LevelGenerator.generated.h"
@@ -65,7 +64,8 @@ private:
 	/** The orientation of the base U shape face to. */
 	EDirection BaseDirection;
 
-	/** Represent the Hilbert curve size is 8*8.
+	/** 
+	 * Represent the Hilbert curve size is 8*8.
 	 * true Grid has wall.
 	 * false Grid is empty.
 	 */
@@ -78,5 +78,5 @@ private:
 	int32 CurrentY;
 
 	/** Save all the references of random walls. */
-	TArray<class Wall&>WallArray;
+	TArray<class AWall*>AWallArray;
 };
